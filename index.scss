@@ -10,3 +10,8 @@
         font-weight: 600;
     }
 }
+
+#landingBanner{
+    height: calc(100vh - 107px);
+    overflow: hidden;
+}
