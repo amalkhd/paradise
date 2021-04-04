@@ -1,3 +1,11 @@
+body {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+h5 {
+  font-family: 'Abril Fatface', cursive;
+}
+
 .navbar {
   border-bottom: 1px solid #eee;
 }
@@ -11,8 +19,55 @@
   font-weight: 600;
 }
 
+.btn-gold {
+  background-color: white;
+  border: none;
+  color: #736600;
+}
+
 #landingBanner {
   height: calc(100vh - 107px);
   overflow: hidden;
+}
+
+#landingBanner .carousel-control-next-icon,
+#landingBanner .carousel-control-prev-icon {
+  width: 40px;
+  height: 40px;
+}
+
+#landingBanner .carousel-inner {
+  height: 100%;
+}
+
+#landingBanner .carousel-inner .carousel-item {
+  height: 100%;
+}
+
+#landingBanner .carousel-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+
+#landingBanner .carousel-caption {
+  top: 15%;
+  left: 30%;
+  right: 30%;
+}
+
+#landingBanner .carousel-caption h5 {
+  font-size: 3.25rem;
+  text-transform: capitalize;
+}
+
+#landingBanner .carousel-caption p {
+  letter-spacing: 0.5px;
+  opacity: 0.6;
+  margin-top: 20px;
 }
 /*# sourceMappingURL=index.css.map */
