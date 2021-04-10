@@ -2,8 +2,92 @@ body {
   font-family: 'Roboto', sans-serif !important;
 }
 
-h5 {
-  font-family: 'Abril Fatface', cursive;
+h5.heading, h6.heading, h1.heading, h2.heading, h6.heading {
+  font-weight: 700;
+}
+
+#map {
+  height: 500px;
+}
+
+.white {
+  color: white;
+}
+
+#about {
+  background: #eee;
+}
+
+#about .circle-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#about .circle-item .icon {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  background-color: #b7aa34;
+  border-radius: 35px;
+}
+
+#about .circle-item .content {
+  width: 85%;
+}
+
+#about .circle-item .content p {
+  font-size: 14px;
+}
+
+.text-grey, #about .circle-item {
+  opacity: 0.8;
+}
+
+#products {
+  position: relative;
+  background-image: url("ship.jpg");
+  background-attachment: fixed;
+}
+
+#products .overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: white;
+  opacity: 0.5;
+}
+
+#products .container {
+  position: relative;
+}
+
+#products .item {
+  text-align: left;
+}
+
+#products .item .item-img {
+  height: 400px;
+  overflow: hidden;
+}
+
+#products .item h5 {
+  margin: 20px 0;
+  font-weight: 700;
 }
 
 .navbar {
@@ -60,8 +144,7 @@ h5 {
   right: 30%;
 }
 
-#landingBanner .carousel-caption h5 {
-  font-size: 3.25rem;
+#landingBanner .carousel-caption h1 {
   text-transform: capitalize;
 }
 
