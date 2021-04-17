@@ -2,8 +2,8 @@ body {
   font-family: "Roboto", sans-serif !important;
 }
 
-$theme-blue: #0b2455;
-$theme-gold: #978700;
+$theme-blue: #1e2352;
+$theme-gold: #e0b66b;
 
 h5,
 h6,
@@ -26,7 +26,7 @@ h6 {
 }
 
 #about {
-  background: #0b245500;
+  background: transparentize($theme-blue, 0.9);
   .circle-item {
     width: calc(100% / 3);
     display: flex;
@@ -108,7 +108,6 @@ h6 {
 #products {
   position: relative;
   background-attachment: fixed;
-  background-color: #3c50770d;
   .overlay {
     position: absolute;
     left: 0;
@@ -140,7 +139,7 @@ h6 {
 }
 
 .navbar {
-  background-color: #0b2455;
+  background-color: $theme-blue;
   .navbar-brand {
     img {
       height: 80px;
@@ -149,6 +148,9 @@ h6 {
   .nav-link {
     text-transform: uppercase;
     color: white;
+    font-family: "Merriweather", serif;
+    letter-spacing: 1px;
+    font-size:14px;
     &.active {
       color: $theme-gold;
     }

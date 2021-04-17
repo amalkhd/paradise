@@ -27,7 +27,7 @@ h6.heading.big {
 }
 
 #about {
-  background: #0b245500;
+  background: rgba(30, 35, 82, 0.1);
 }
 
 #about .circle-item {
@@ -58,7 +58,7 @@ h6.heading.big {
       -ms-flex-pack: center;
           justify-content: center;
   color: white;
-  background-color: #0b2455;
+  background-color: #1e2352;
   border-radius: 35px;
 }
 
@@ -137,7 +137,7 @@ h6.heading.big {
 }
 
 #about .about-img .overlay {
-  background-color: #0b2455;
+  background-color: #1e2352;
   opacity: 0.8;
   position: absolute;
   left: 0;
@@ -153,7 +153,6 @@ h6.heading.big {
 #products {
   position: relative;
   background-attachment: fixed;
-  background-color: #3c50770d;
 }
 
 #products .overlay {
@@ -194,11 +193,11 @@ h6.heading.big {
 
 #products .item h5 {
   margin: 20px 0;
-  color: #0b2455;
+  color: #1e2352;
 }
 
 .navbar {
-  background-color: #0b2455;
+  background-color: #1e2352;
 }
 
 .navbar .navbar-brand img {
@@ -208,14 +207,17 @@ h6.heading.big {
 .navbar .nav-link {
   text-transform: uppercase;
   color: white;
+  font-family: "Merriweather", serif;
+  letter-spacing: 1px;
+  font-size: 14px;
 }
 
 .navbar .nav-link.active {
-  color: #978700;
+  color: #e0b66b;
 }
 
 .btn-blue {
-  background-color: #0b2455;
+  background-color: #1e2352;
   border: none;
   color: white;
 }
