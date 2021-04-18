@@ -142,15 +142,15 @@ h6 {
   background-color: $theme-blue;
   .navbar-brand {
     img {
-      height: 80px;
+      height: 70px;
     }
   }
   .nav-link {
     text-transform: uppercase;
     color: white;
     font-family: "Merriweather", serif;
-    letter-spacing: 1px;
-    font-size:14px;
+    letter-spacing: 2px;
+    font-size: 12px;
     &.active {
       color: $theme-gold;
     }
