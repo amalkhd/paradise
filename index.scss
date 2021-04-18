@@ -2,7 +2,7 @@ body {
   font-family: "Roboto", sans-serif !important;
 }
 
-$theme-blue: #1e2352;
+$theme-blue: #292d4c;
 $theme-gold: #e0b66b;
 
 h5,
@@ -33,7 +33,6 @@ h6 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    @extend .text-grey;
     .icon {
       width: 50px;
       height: 50px;
@@ -41,7 +40,7 @@ h6 {
       align-items: center;
       justify-content: center;
       color: white;
-      background-color: $theme-blue;
+      background-color: transparentize($theme-blue, 0.1);
       border-radius: 35px;
     }
     .content {

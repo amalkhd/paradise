@@ -27,7 +27,7 @@ h6.heading.big {
 }
 
 #about {
-  background: rgba(30, 35, 82, 0.1);
+  background: rgba(41, 45, 76, 0.1);
 }
 
 #about .circle-item {
@@ -58,7 +58,7 @@ h6.heading.big {
       -ms-flex-pack: center;
           justify-content: center;
   color: white;
-  background-color: #1e2352;
+  background-color: rgba(41, 45, 76, 0.9);
   border-radius: 35px;
 }
 
@@ -137,7 +137,7 @@ h6.heading.big {
 }
 
 #about .about-img .overlay {
-  background-color: #1e2352;
+  background-color: #292d4c;
   opacity: 0.8;
   position: absolute;
   left: 0;
@@ -146,7 +146,7 @@ h6.heading.big {
   bottom: 0;
 }
 
-.text-grey, #about .circle-item {
+.text-grey {
   opacity: 0.8;
 }
 
@@ -193,11 +193,11 @@ h6.heading.big {
 
 #products .item h5 {
   margin: 20px 0;
-  color: #1e2352;
+  color: #292d4c;
 }
 
 .navbar {
-  background-color: #1e2352;
+  background-color: #292d4c;
 }
 
 .navbar .navbar-brand img {
@@ -217,7 +217,7 @@ h6.heading.big {
 }
 
 .btn-blue {
-  background-color: #1e2352;
+  background-color: #292d4c;
   border: none;
   color: white;
 }
