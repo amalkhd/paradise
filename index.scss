@@ -4,6 +4,13 @@ body {
 
 $theme-blue: #292d4c;
 $theme-gold: #e0b66b;
+$theme-blue-bg: #fafbff;
+$theme-heading-blue: #434758;
+$theme-desc-blue: transparentize($theme-heading-blue, 0.1);
+
+.font-merri {
+  font-family: "Merriweather", serif;
+}
 
 h5,
 h6,
@@ -11,10 +18,14 @@ h1,
 h2,
 h6 {
   &.heading {
-    font-family: "Merriweather", serif;
+    @extend .font-merri;
     // font-weight: 700;
     &.big {
       font-size: 48px;
+      color: $theme-heading-blue;
+      & + p {
+        color: $theme-desc-blue;
+      }
     }
   }
 }
@@ -26,9 +37,8 @@ h6 {
 }
 
 #about {
-  background: transparentize($theme-blue, 0.9);
+  background: $theme-blue-bg;
   .circle-item {
-    width: calc(100% / 3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,9 +57,11 @@ h6 {
       width: 85%;
       .heading {
         text-transform: capitalize;
+        color: $theme-heading-blue;
       }
       p {
         font-size: 14px;
+        color: $theme-desc-blue;
       }
     }
   }
@@ -57,26 +69,26 @@ h6 {
     position: relative;
     display: flex;
     align-items: center;
-    height: 400px;
     overflow: hidden;
     justify-content: center;
+    height: auto;
+    background-image: url('shake.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
     .content {
-      z-index: 1;
+      position: relative;
       color: white;
-      position: absolute;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: space-around;
-      text-align: center;
       p {
-        width: calc(100%/4);
         display: flex;
         flex-direction: column;
         align-items: center;
         font-size: 14px;
         letter-spacing: 1px;
-        i{
+        text-align: center;
+        i {
           height: 50px;
           width: 50px;
           display: flex;
@@ -90,7 +102,7 @@ h6 {
     }
     .overlay {
       background-color: $theme-blue;
-      opacity: 0.8;
+      opacity: 0.6;
       position: absolute;
       left: 0;
       right: 0;
@@ -121,6 +133,10 @@ h6 {
   }
   .item {
     text-align: left;
+    border: 1px solid transparentize($theme-blue, 0.9);
+    border-radius: 4px;
+    overflow: hidden;
+    height: 100%;
     .item-img {
       height: 200px;
       display: flex;
@@ -129,16 +145,39 @@ h6 {
       align-items: center;
       justify-content: center;
     }
-    h5 {
-      margin: 20px 0;
-      color: $theme-blue;
-      // font-weight: 700;
+    .content {
+      padding: 20px;
+      h5 {
+        // color: $theme-blue;
+        color: #434758;
+        font-weight: 600;
+      }
+      small {
+        color: #4a5375;
+        font-size: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        span {
+          border-radius: 13px;
+          background-color: #d1daf9;
+          padding: 2px 10px;
+          margin: 2px 5px;
+          margin-left: 0;
+        }
+      }
     }
   }
 }
 
 .navbar {
   background-color: $theme-blue;
+  .contact{
+   a{
+     &:hover{
+       color: $theme-gold;
+     }
+   }
+  }
   .navbar-brand {
     img {
       height: 70px;
@@ -147,7 +186,7 @@ h6 {
   .nav-link {
     text-transform: uppercase;
     color: white;
-    font-family: "Merriweather", serif;
+    @extend .font-merri;
     letter-spacing: 2px;
     font-size: 12px;
     &.active {
@@ -172,24 +211,16 @@ h6 {
     width: 40px;
     height: 40px;
   }
-  //   .carousel-control-prev {
-  //     justify-content: flex-start;
-  //     left: 15%;
-  //     top: 60%;
-  //     bottom: auto;
-  //     right: auto;
-  //     width: auto;
-  //   }
-  //   .carousel-control-next {
-  //     justify-content: flex-start;
-  //     left: 18%;
-  //     top: 60%;
-  //     bottom: auto;
-  //     right: auto;
-  //     width: auto;
-  //   }
   .carousel-inner {
     height: 100%;
+    @media(max-width:767px ){
+//  display: flex;
+      img{
+        height: 100%;
+        width: auto !important;
+      }
+    }
+
     .carousel-item {
       height: 100%;
     }
@@ -205,13 +236,20 @@ h6 {
   }
   .carousel-caption {
     top: 15%;
-    left: 30%;
-    right: 30%;
+
+    @media(min-width:768px ){
+      left: 20%;
+      right: 20%;
+    }
     display: flex;
     align-items: center;
+    flex-direction: column;
     h1 {
       text-transform: capitalize;
-      font-size: 56px;
+      @media(min-width:768px ){
+        font-size: 56px;
+
+      }
     }
     p {
       //   font-size: 1.25rem;
@@ -221,6 +259,89 @@ h6 {
     }
     button {
       padding: 10px 20px;
+    }
+  }
+}
+
+#contact {
+  background-color: $theme-blue-bg;
+  .contact-item {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    > i {
+      border: 2px solid $theme-blue;
+      font-size: 32px;
+      opacity: 0.9;
+      padding: 8px;
+      color: $theme-blue;
+      border-radius: 30px;
+      margin-bottom: 10px;
+    }
+    a {
+      color: $theme-blue;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      &:hover {
+        border-bottom: 1px solid;
+      }
+      i {
+        font-size: 18px;
+        margin-right: 5px;
+      }
+    }
+    span {
+      color: $theme-desc-blue;
+      &:first-of-type {
+        // @extend.font-merri;
+        letter-spacing: 1px;
+        margin: 5px 0;
+        font-size: 14px;
+      }
+
+      &:not(:first-of-type) {
+        // color: $theme-blue;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+#footer {
+  background-color: $theme-blue;
+  padding-top: 40px;
+  color: $theme-gold;
+  .exim {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 80px;
+    }
+    p{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin: 0;
+    margin-top: 10px;
+    }
+
+  }
+  .end-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid $theme-heading-blue;
+    margin-top: 20px;
+    color: lighten($theme-desc-blue, 40%);
+    small{
+      letter-spacing: 4px;
+      font-size: 10px;
     }
   }
 }
