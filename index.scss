@@ -12,6 +12,10 @@ $theme-desc-blue: transparentize($theme-heading-blue, 0.1);
   font-family: "Merriweather", serif;
 }
 
+.desc-blue{
+  color: $theme-desc-blue;
+}
+
 h5,
 h6,
 h1,
@@ -343,5 +347,15 @@ h6 {
       letter-spacing: 4px;
       font-size: 10px;
     }
+  }
+}
+
+.about-block{
+  height: 60px;
+  span{
+    height: 4px;
+    background-color: #3e425e;
+    width: 40px;
+    border-radius: 10px;
   }
 }

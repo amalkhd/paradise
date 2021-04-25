@@ -9,6 +9,10 @@ h2.heading, .navbar .nav-link {
   font-family: "Merriweather", serif;
 }
 
+.desc-blue {
+  color: rgba(67, 71, 88, 0.9);
+}
+
 h5.heading.big,
 h6.heading.big,
 h1.heading.big,
@@ -454,5 +458,16 @@ h6.heading.big + p {
 #footer .end-wrap small {
   letter-spacing: 4px;
   font-size: 10px;
+}
+
+.about-block {
+  height: 60px;
+}
+
+.about-block span {
+  height: 4px;
+  background-color: #3e425e;
+  width: 40px;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=index.css.map */
